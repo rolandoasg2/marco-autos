@@ -1,0 +1,385 @@
+.stories-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.stories-wrapper {
+  width: 100%;
+  max-width: 430px; /* Ancho similar a Instagram móvil */
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+  background: #000;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.story-item {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Header del auto */
+.story-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white;
+}
+
+.auto-title h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.auto-title .year {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4CAF50;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Indicadores de progreso */
+.progress-indicators {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  gap: 4px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 3px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar.active {
+  background: rgba(255,255,255,0.6);
+}
+
+.progress-bar.completed {
+  background: white;
+}
+
+/* Carrusel de fotos */
+.photo-carousel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.photos-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.photo-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.photo-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Controles de navegación de fotos */
+.photo-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+  backdrop-filter: blur(10px);
+}
+
+.photo-nav-btn:hover {
+  background: rgba(0,0,0,0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.photo-nav-btn.prev-photo {
+  left: 20px;
+}
+
+.photo-nav-btn.next-photo {
+  right: 20px;
+}
+
+/* Información del auto - Estilo Instagram con fondo blanco */
+.auto-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 16px 20px 20px;
+  background: white; /* Fondo blanco como Instagram */
+  color: #262626; /* Color de texto negro como Instagram */
+  border-top: 1px solid #efefef; /* Borde sutil como Instagram */
+}
+
+.photo-counter {
+  font-size: 0.8rem;
+  color: #8e8e8e; /* Color gris para el contador como Instagram */
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.auto-info .description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0 0 8px 0; /* Margen inferior para separar del timestamp */
+  color: #262626; /* Texto negro como Instagram */
+  font-weight: 400;
+  text-align: left;
+}
+
+/* Timestamp estilo Instagram */
+.timestamp {
+  font-size: 0.8rem;
+  color: #8e8e8e; /* Color gris como Instagram */
+  font-weight: 400;
+  text-align: left;
+  margin-top: 8px; /* Separación del texto de descripción */
+  padding-bottom: 4px; /* Espacio adicional abajo */
+}
+
+/* Indicador de scroll */
+.scroll-indicator {
+  position: absolute;
+  bottom: 160px; /* Ajustado para el nuevo tamaño de la info con timestamp */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+  transform: rotate(90deg);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stories-wrapper {
+    max-width: 100%;
+    box-shadow: none;
+  }
+  
+  .story-header {
+    padding: 15px;
+  }
+  
+  .auto-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .price {
+    font-size: 1.4rem;
+  }
+  
+  .progress-indicators {
+    top: 70px;
+    left: 15px;
+    right: 15px;
+  }
+  
+  .photo-nav-btn {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .photo-nav-btn.prev-photo {
+    left: 15px;
+  }
+  
+  .photo-nav-btn.next-photo {
+    right: 15px;
+  }
+  
+  .auto-info {
+    padding: 14px 15px 18px;
+  }
+  
+  .auto-info .description {
+    font-size: 0.9rem;
+  }
+  
+  .timestamp {
+    font-size: 0.75rem;
+  }
+  
+  .scroll-indicator {
+    bottom: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-header {
+    padding: 12px;
+  }
+  
+  .auto-title h2 {
+    font-size: 1.3rem;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+  }
+  
+  .progress-indicators {
+    top: 60px;
+    left: 12px;
+    right: 12px;
+  }
+  
+  .photo-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .photo-nav-btn.prev-photo {
+    left: 12px;
+  }
+  
+  .photo-nav-btn.next-photo {
+    right: 12px;
+  }
+  
+  .auto-info {
+    padding: 12px;
+  }
+  
+  .auto-info .description {
+    font-size: 0.85rem;
+  }
+  
+  .timestamp {
+    font-size: 0.7rem;
+  }
+  
+  .scroll-indicator {
+    bottom: 120px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Desktop - Ancho fijo como Instagram */
+@media (min-width: 769px) {
+  .stories-container {
+    background: #f5f5f5; /* Fondo gris claro para los bordes */
+  }
+  
+  .stories-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+}
+
+/* Smooth scrolling and animations */
+@media (prefers-reduced-motion: no-preference) {
+  .photo-track {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .photo-nav-btn {
+    transition: all 0.3s ease;
+  }
+  
+  .stories-container {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar for desktop */
+.stories-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.stories-container::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+}
+
+.stories-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+}
+
+.stories-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.5);
+}
