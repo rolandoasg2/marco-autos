@@ -21,14 +21,20 @@ C:.
 |                   +---deps
 |                   |       @angular_common.js
 |                   |       @angular_common.js.map
+|                   |       @angular_common_http.js
+|                   |       @angular_common_http.js.map
 |                   |       @angular_core.js
 |                   |       @angular_core.js.map
 |                   |       @angular_platform-browser.js
 |                   |       @angular_platform-browser.js.map
+|                   |       chunk-DJTGW5FF.js
+|                   |       chunk-DJTGW5FF.js.map
+|                   |       chunk-E45CYK4M.js
+|                   |       chunk-E45CYK4M.js.map
+|                   |       chunk-QYQZWJYQ.js
+|                   |       chunk-QYQZWJYQ.js.map
 |                   |       chunk-S5N2R7HB.js
 |                   |       chunk-S5N2R7HB.js.map
-|                   |       chunk-TIUAIGYV.js
-|                   |       chunk-TIUAIGYV.js.map
 |                   |       chunk-WDMUDEB6.js
 |                   |       chunk-WDMUDEB6.js.map
 |                   |       package.json
@@ -50,11 +56,13 @@ C:.
 |       |   
 |       \---browser
 |           |   index.html
-|           |   main.js
-|           |   polyfills.js
-|           |   styles.css
+|           |   main-TS7FD5Y7.js
+|           |   polyfills-2722SGVH.js
+|           |   styles-LEAZMA5X.css
 |           |   
 |           \---assets
+|               |   autos.json
+|               |   
 |               \---images
 |                   \---autos
 |                       |   README.md
@@ -78,13 +86,33 @@ C:.
 |   \---.cache
 |       \---gh-pages
 |           \---https!github.com!rolandoasg2!marco-autos.git
-|                   .nojekyll
-|                   404.html
-|                   index.html
-|                   main-IIPUYZKP.js
-|                   polyfills-2722SGVH.js
-|                   styles-LEAZMA5X.css
-|                   
+|               |   .nojekyll
+|               |   404.html
+|               |   index.html
+|               |   main-6LXNSNEO.js
+|               |   polyfills-2722SGVH.js
+|               |   styles-LEAZMA5X.css
+|               |   
+|               \---assets
+|                   \---images
+|                       \---autos
+|                           |   README.md
+|                           |   
+|                           +---auto1
+|                           |       foto1.JPG
+|                           |       foto2.JPG
+|                           |       foto3.JPG
+|                           |       
+|                           +---auto2
+|                           |       foto1.JPG
+|                           |       foto2.JPG
+|                           |       foto3.JPG
+|                           |       
+|                           \---auto3
+|                                   foto1.JPG
+|                                   foto2.JPG
+|                                   foto3.JPG
+|                                   
 \---src
     |   global_styles.css
     |   index.html
@@ -93,9 +121,12 @@ C:.
     +---app
     |   \---auto-gallery
     |           auto-gallery.component.css
+    |           auto-gallery.component.html
     |           auto-gallery.component.ts
     |           
     \---assets
+        |   autos.json
+        |   
         \---images
             \---autos
                 |   README.md

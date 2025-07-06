@@ -1,0 +1,33 @@
+<div *ngIf="autos.length > 0" class="stories-container">
+  <div class="stories-wrapper">
+    <div class="story-item">
+      <div class="story-header">
+        <div class="auto-title">
+          <h2>{{ autos[currentAutoIndex].title }}</h2>
+          <div class="year">{{ autos[currentAutoIndex].year }}</div>
+        </div>
+        <div class="price">{{ autos[currentAutoIndex].price }}</div>
+      </div>
+
+      <div class="photo-carousel">
+        <div class="photos-container">
+          <div class="photo-track" [style.transform]="'translateX(-' + currentPhotoIndex * 100 + '%)'">
+            <div class="photo-slide" *ngFor="let img of autos[currentAutoIndex].images">
+              <img [src]="img" alt="Imagen de {{ autos[currentAutoIndex].title }}">
+            </div>
+          </div>
+        </div>
+
+        <button class="photo-nav-btn prev-photo" (click)="prevPhoto()">‹</button>
+        <button class="photo-nav-btn next-photo" (click)="nextPhoto()">›</button>
+      </div>
+
+      <div class="auto-info">
+        <div class="photo-counter">
+          Foto {{ currentPhotoIndex + 1 }} de {{ autos[currentAutoIndex].images.length }}
+        </div>
+        <div class="description">{{ autos[currentAutoIndex].description }}</div>
+      </div>
+    </div>
+  </div>
+</div>
