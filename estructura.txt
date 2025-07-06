@@ -1,0 +1,117 @@
+Listado de rutas de carpetas
+El n£mero de serie del volumen es 9029-415A
+C:.
+|   .gitignore
+|   angular.json
+|   estructura.txt
+|   package-lock.json
+|   package.json
+|   tsconfig.app.json
+|   tsconfig.json
+|   
++---.angular
+|   \---cache
+|       \---20.0.0
+|           \---demo
+|               |   .tsbuildinfo
+|               |   angular-compiler.db
+|               |   angular-compiler.db-lock
+|               |   
+|               \---vite
+|                   +---deps
+|                   |       @angular_common.js
+|                   |       @angular_common.js.map
+|                   |       @angular_core.js
+|                   |       @angular_core.js.map
+|                   |       @angular_platform-browser.js
+|                   |       @angular_platform-browser.js.map
+|                   |       chunk-S5N2R7HB.js
+|                   |       chunk-S5N2R7HB.js.map
+|                   |       chunk-TIUAIGYV.js
+|                   |       chunk-TIUAIGYV.js.map
+|                   |       chunk-WDMUDEB6.js
+|                   |       chunk-WDMUDEB6.js.map
+|                   |       package.json
+|                   |       zone__js.js
+|                   |       zone__js.js.map
+|                   |       _metadata.json
+|                   |       
+|                   \---deps_ssr
+|                           package.json
+|                           _metadata.json
+|                           
++---.bolt
+|       config.json
+|       
++---dist
+|   \---demo
+|       |   3rdpartylicenses.txt
+|       |   prerendered-routes.json
+|       |   
+|       \---browser
+|           |   index.html
+|           |   main.js
+|           |   polyfills.js
+|           |   styles.css
+|           |   
+|           \---assets
+|               \---images
+|                   \---autos
+|                       |   README.md
+|                       |   
+|                       +---auto1
+|                       |       foto1.JPG
+|                       |       foto2.JPG
+|                       |       foto3.JPG
+|                       |       
+|                       +---auto2
+|                       |       foto1.JPG
+|                       |       foto2.JPG
+|                       |       foto3.JPG
+|                       |       
+|                       \---auto3
+|                               foto1.JPG
+|                               foto2.JPG
+|                               foto3.JPG
+|                               
++---node_modules
+|   \---.cache
+|       \---gh-pages
+|           \---https!github.com!rolandoasg2!marco-autos.git
+|                   .nojekyll
+|                   404.html
+|                   index.html
+|                   main-IIPUYZKP.js
+|                   polyfills-2722SGVH.js
+|                   styles-LEAZMA5X.css
+|                   
+\---src
+    |   global_styles.css
+    |   index.html
+    |   main.ts
+    |   
+    +---app
+    |   \---auto-gallery
+    |           auto-gallery.component.css
+    |           auto-gallery.component.ts
+    |           
+    \---assets
+        \---images
+            \---autos
+                |   README.md
+                |   
+                +---auto1
+                |       foto1.JPG
+                |       foto2.JPG
+                |       foto3.JPG
+                |       
+                +---auto2
+                |       foto1.JPG
+                |       foto2.JPG
+                |       foto3.JPG
+                |       
+                \---auto3
+                        foto1.JPG
+                        foto2.JPG
+                        foto3.JPG
+                        
