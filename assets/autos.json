@@ -1,0 +1,38 @@
+[
+  {
+    "id": "auto1",
+    "title": "Auto 1",
+    "year": "2020",
+    "price": "$15,000",
+    "description": "Descripción para Auto 1",
+    "images": [
+      "assets/images/autos/auto1/foto1.jpg",
+      "assets/images/autos/auto1/foto2.jpg",
+      "assets/images/autos/auto1/foto3.jpg"
+    ]
+  },
+  {
+    "id": "auto2",
+    "title": "Auto 2",
+    "year": "2018",
+    "price": "$12,500",
+    "description": "Descripción para Auto 2",
+    "images": [
+      "assets/images/autos/auto2/foto1.jpg",
+      "assets/images/autos/auto2/foto2.jpg",
+      "assets/images/autos/auto2/foto3.jpg"
+    ]
+  },
+  {
+    "id": "auto3",
+    "title": "Auto 3",
+    "year": "2022",
+    "price": "$17,800",
+    "description": "Descripción para Auto 3",
+    "images": [
+      "assets/images/autos/auto3/foto1.jpg",
+      "assets/images/autos/auto3/foto2.jpg",
+      "assets/images/autos/auto3/foto3.jpg"
+    ]
+  }
+]
